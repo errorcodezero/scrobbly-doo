@@ -1,8 +1,8 @@
 // @ts-check
-import { defineConfig, envField } from 'astro/config';
-import svelte from '@astrojs/svelte';
+import { defineConfig, envField } from "astro/config";
+import svelte from "@astrojs/svelte";
 
-import cloudflare from "@astrojs/cloudflare";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,12 +10,15 @@ export default defineConfig({
 
   env: {
     schema: {
-      APPLICATION_NAME: envField.string({ context: "server", access: "secret" }),
+      APPLICATION_NAME: envField.string({
+        context: "server",
+        access: "secret",
+      }),
       API_KEY: envField.string({ context: "server", access: "secret" }),
       SHARED_SECRET: envField.string({ context: "server", access: "secret" }),
       REGISTERED_TO: envField.string({ context: "server", access: "public" }),
-    }
+    },
   },
 
-  adapter: cloudflare()
+  adapter: vercel(),
 });
