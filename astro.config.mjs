@@ -2,9 +2,12 @@
 import { defineConfig, envField } from 'astro/config';
 import svelte from '@astrojs/svelte';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte()],
+
   env: {
     schema: {
       APPLICATION_NAME: envField.string({ context: "server", access: "secret" }),
@@ -12,5 +15,7 @@ export default defineConfig({
       SHARED_SECRET: envField.string({ context: "server", access: "secret" }),
       REGISTERED_TO: envField.string({ context: "server", access: "public" }),
     }
-  }
+  },
+
+  adapter: cloudflare()
 });
