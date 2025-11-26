@@ -1,5 +1,12 @@
 ---
+import { get_tracks, last_fm } from "../lib/last_fm";
+import type { Track } from "../lib/last_fm"
 
+export const prerender = false;
+
+const data = await get_tracks(last_fm);
+
+import Player from "./player.svelte"
 ---
 
 <html lang="en">
@@ -11,6 +18,6 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Player track={data}/>
 	</body>
 </html>

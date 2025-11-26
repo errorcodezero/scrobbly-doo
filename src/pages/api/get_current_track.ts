@@ -4,6 +4,9 @@ export async function GET({ params }: { params: any }) {
 	const search = params.album;
 
 	return new Response(JSON.stringify((await get_current_track(last_fm))), {
-		status: 200
+		status: 200,
+		headers: {
+			"Cache-Control": "max-age=60"
+		}
 	});
 }
