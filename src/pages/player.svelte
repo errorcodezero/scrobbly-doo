@@ -35,6 +35,9 @@
 		display: grid;
 		padding-left: 0.5em;
 		color: var(--ctp-mocha-text);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	#name {
