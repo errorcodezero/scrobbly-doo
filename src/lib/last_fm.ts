@@ -6,18 +6,18 @@ import {
 } from "astro:env/server";
 
 export interface LastFM {
-	application_name: String;
-	api_key: String;
-	shared_secret: String;
-	registered_to: String;
+	application_name: string;
+	api_key: string;
+	shared_secret: string;
+	registered_to: string;
 }
 
 export interface Track {
 	defined: boolean;
-	name: String;
-	artists: String;
-	images: String[];
-	album: String;
+	name: string;
+	artists: string;
+	images: string[];
+	album: string;
 }
 
 export let last_fm: LastFM = {
@@ -60,7 +60,7 @@ export async function get_tracks(last_fm: LastFM): Promise<Track> {
 			name: "",
 			artists: "",
 			images: [],
-			album: ""
+			album: "",
 		};
 	}
 	return {
@@ -68,6 +68,6 @@ export async function get_tracks(last_fm: LastFM): Promise<Track> {
 		name: "",
 		artists: "",
 		images: [],
-		album: ""
+		album: "",
 	};
 }
