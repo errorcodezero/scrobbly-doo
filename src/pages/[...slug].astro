@@ -8,6 +8,8 @@ const data = await get_tracks(last_fm);
 import Player from "./player.svelte"
 import Head from "./head.svelte"
 import "./app.css"
+
+Astro.response.headers.set("Cache-Control", "no-cache");
 ---
 
 <html lang="en">
