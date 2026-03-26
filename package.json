@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^7.2.2",
-    "@astrojs/vercel": "^9.0.1",
+    "@astrojs/vercel": "^10.0.2",
     "@catppuccin/palette": "^1.7.1",
     "@fontsource-variable/sora": "^5.2.8",
     "astro": "^5.16.0",
