@@ -9,11 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^7.2.2",
-    "@astrojs/vercel": "^9.0.1",
+    "@astrojs/svelte": "^8.0.4",
+    "@astrojs/vercel": "^10.0.3",
     "@catppuccin/palette": "^1.7.1",
     "@fontsource-variable/sora": "^5.2.8",
-    "astro": "^5.16.0",
+    "astro": "^6.1.1",
     "svelte": "^5.44.0",
     "typescript": "^5.9.3"
   }
