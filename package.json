@@ -13,7 +13,7 @@
     "@astrojs/vercel": "^10.0.3",
     "@catppuccin/palette": "^1.7.1",
     "@fontsource-variable/sora": "^5.2.8",
-    "astro": "^6.1.1",
+    "astro": "^6.1.6",
     "svelte": "^5.44.0",
     "typescript": "^5.9.3"
   }
